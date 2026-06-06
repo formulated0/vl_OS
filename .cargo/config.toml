@@ -1,0 +1,13 @@
+[build]
+target = "i686-unknown-none"
+
+[target.i686-unknown-none]
+rustflags = [
+    "-C", "panic=abort",
+    "-C", "opt-level=2",
+    "-C", "debuginfo=0",
+]
+
+[unstable]
+build-std = ["core"]
+build-std-features = ["compiler-builtins-mem"]
